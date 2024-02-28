@@ -1,0 +1,95 @@
+{% load static %}
+<style>
+	/* CSS for dropdown menu */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+
+	.nav-signin:hover .dropdown-content {
+		display: block;
+	}
+
+	a {
+		color: white;
+		/* Set link color to white */
+		text-decoration: none;
+		/* Remove underline */
+	}
+
+	/* Dropdown menu styles */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		color: black;
+	}
+
+	/* Show dropdown when "Account & Lists" is clicked */
+	.nav-signin:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropdown-content a {
+		display: block;
+		padding: 10px;
+		color: black;
+	}
+
+	/* Advertisement banner styles */
+</style>
+
+
+<header>
+	<div class="navbar">
+		<div class="nav-logo">
+			<div class="logo">
+				<img src="{% static  'img/assets/MercuryLogo.png' %}" alt="Mercury Logo"
+					style="width: 120px; height: auto; margin-top: 3px; border: transparent;" />
+			</div>
+		</div>
+
+		<div class="nav-address">
+			<p class="add-first">Deliver to</p>
+			<div class="add-icon">
+				<i class="fa-solid fa-location-dot"></i>
+				<p class="add-second">India</p>
+			</div>
+		</div>
+
+		<div class="nav-search">
+			<select class="search-select">
+				<option>All</option>
+			</select>
+			<input placeholder="Search Mercury..." class="search-input">
+			<div class="search-icon">
+				<a href="#">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="nav-signin">
+			<p><span>Hello, sign in</span></p>
+			<p class="nav-second">Account & Lists</p>
+			<div class="dropdown-content">
+				<a href="login.html">Login</a>
+				<a href="register.html">Register</a>
+			</div>
+		</div>
+
+		<div class="nav-return">
+			<p class="nav-second"><a href="returns.html">Returns<br>& Orders</a></p>
+		</div>
+
+		<div class="nav-cart">
+			<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+		</div>
+	</div>
+</header>

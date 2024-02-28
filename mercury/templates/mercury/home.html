@@ -1,9 +1,527 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 <title>Home Page</title>
 {% endblock title %}
-
 {% block content %}
-<h1>Welcome to Mercury</h1>
+<section class="image-section">
+	<div class="image-container">
+		<img src="{% static  'img/assets/slider2.png' %}" alt="Image 1">
+	</div>
+	<div class="image-container">
+		<a href="next_page.html">
+			<img src="{% static  'img/assets/slider3.png' %}" alt="Image 2">
+		</a>
+	</div>
+</section>
+
+<!-- Features Section-->
+<section class="feature-container">
+	<!-- Card 1 -->
+	<div class="feature-card" style="height: 190px;">
+		<img src="https://static.vecteezy.com/system/resources/previews/001/977/354/non_2x/smartphone-with-delivery-worker-using-face-mask-in-motorcycle-free-vector.jpg"
+			alt="Feature 1" style="margin: 1px; width: auto; height: 138px;">
+		<h3 style="margin-top: 1px;">Free Shipping</h3>
+	</div>
+	<!-- Card 2 -->
+	<div class="feature-card" style="height: 190px;">
+		<img src="https://static.vecteezy.com/system/resources/previews/007/978/851/original/hand-putting-coin-into-piggy-bank-saving-money-concept-art-vector.jpg"
+			alt="Feature 2" style="margin: 1px; width: auto; height: 165px;">
+		<h3 style="margin-top: -24px;">Save Money</h3>
+	</div>
+	<!-- Card 3 -->
+	<div class="feature-card" style="height: 190px;">
+		<img src="https://media.istockphoto.com/id/1399624092/vector/online-shopping-concept-illustration-web-templates-flat-design-vector-poster.jpg?s=612x612&w=0&k=20&c=ahdx3ShDuoH4RP7O9l0jPMKPHx42xWqiXDyOPKYFQ6g="
+			alt="Feature 3" style="margin: -10px;">
+		<h3 style="margin-top: 16px;">Happy Selling</h3>
+	</div>
+	<!-- Card 4 -->
+	<div class="feature-card" style="height: 190px;">
+		<img src="https://cdn.dribbble.com/users/11305838/screenshots/17992506/media/bfafe16bcc50a9874330a60b919112f9.jpg"
+			alt="Feature 4" style="margin: 2px;">
+		<h3 style="margin-top: 7px; font-size: 20px;">Promotions</h3>
+	</div>
+	<!-- Card 5 -->
+	<div class="feature-card" style="height: 190px;">
+		<img src="https://media.istockphoto.com/id/1220488852/vector/delivery-service-mover-postman-loader-worker-or-courier-delivering-packages-helps-with.jpg?s=612x612&w=0&k=20&c=kN9ZnE1wKOqhUksgdJpiBiy8bKxGerlVuncD69i0X7w="
+			alt="Feature 5" style="margin: -1px;">
+		<h3 style="margin-top: 11px;">Easy Returns</h3>
+	</div>
+	<!-- Card 6 -->
+	<div class="feature-card" style="height: 190px;">
+		<img src="https://img.freepik.com/premium-vector/flat-customer-support-illustration_23-2148892450.jpg"
+			alt="Feature 6" style="margin: -10px;">
+		<h3 style="margin-top: -14px;">24/7 Support</h3>
+	</div>
+</section>
+
+<!-- Category Heading -->
+<div class="heading-container">
+	<h2>Shop By Categories</h2>
+</div>
+
+<!-- Card container -->
+<div class="card-container">
+	<!-- Card 1: Clothing -->
+	<a href="clothing.html">
+		<div class="card" style="height: 160px;">
+			<img src="https://assets.ynap-content.com/story-head-content-V1-1613574347642.gif" alt="Clothing"
+				style="height: 80%;">
+			<h3>Clothing</h3>
+		</div>
+	</a>
+	<!-- Card 2: Electronics -->
+	<a href="electronics.html">
+		<div class="card" style="height: 160px;">
+			<img src="https://cdn.dribbble.com/users/380540/screenshots/1839687/retro-gif.gif" alt="Electronics"
+				style="height: 80%;">
+			<h3>Electronics</h3>
+		</div>
+	</a>
+	<!-- Card 3: Beauty & Cosmetics -->
+	<a href="cosmetics.html">
+		<div class="card" style="height: 160px;">
+			<img src="https://pureoilsindia.b-cdn.net/builder/images/gallery/uploaded/Color-Cosmetics-(2000x1400).gif"
+				alt="Beauty & Cosmetics" style="height: 80%;">
+			<h3>Beauty & Cosmetics</h3>
+		</div>
+	</a>
+	<!-- Card 4: Home & Kitchen -->
+	<a href="home_kitchen.html">
+		<div class="card" style="height: 160px;">
+			<img src="https://1.bp.blogspot.com/-W7T3pB2dBAw/XPVnuxEBfSI/AAAAAAAAArQ/cCKtUMqQcBMO5-vD5hoYm9ER7FsJQYGMACLcBGAs/s1600/THE-12-THINGS-YOU-NEED-TO-KICK-START-YOUR-KITCHEN-Feature-compressor.gif"
+				alt="Home & Kitchen" style="height: 80%;">
+			<h3>Home & Kitchen</h3>
+		</div>
+	</a>
+	<!-- Card 5: Books & Stationery -->
+	<a href="books_stationery.html">
+		<div class="card" style="height: 160px;">
+			<img src="https://assets-global.website-files.com/6152909339c5938b8fdca638/6152909339c593d4bbdcac69_60ef811c74d8885b8f74c061_OWE123_STICKY_900x600.gif"
+				alt="Books & Stationery" style="height: 80%;">
+			<h3>Books & Stationery</h3>
+		</div>
+	</a>
+	<!-- Card 6: Sports & Outdoors -->
+	<a href="sports_outdoors.html">
+		<div class="card" style="height: 160px;">
+			<img src="https://images.dickssportinggoods.com/marketing/CLP_052_Football_2023_Q4_1.gif"
+				alt="Sports & Outdoors" style="height: 80%;">
+			<h3>Sports & Outdoors</h3>
+		</div>
+	</a>
+</div>
+
+<!-- Clothing Heading -->
+<div class="summer-container">
+	<h2 data-text="Top Summer Collections">Top Summer Collections</h2><br>
+	<p
+		style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+		Explore our top new summer collections from MERCURY</p>
+</div>
+
+<section class="clothing-cards">
+	<!-- Card 1 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRJd3K4i417FYhf6jODWE3IRtwHGBastgNPTzOK0s0Hc78_W7z3P0cb0WrcgKjgE6BeGtAT1rXTdCY6jopcrAZwCmIP-ZPOHebBVKTYd-0f9x6zkf4sQfLL&usqp=CAE"
+			alt="Clothing 1" style="height: 69%;">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fa-regular fa-star-half-stroke"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 2 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQnSn_BY_ak0UVaiq7wB90mzeOK8KEBojIyEhliFFOQMJPz8PdkFh-2DEoEPZahCnS-HA_u7GnmZadNLF-UPFJQnpx5JhwPx_RUt2eVW06O&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 3 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQm2VipfuEIooq1yVacbppmnd1EAUUNBb9n9MpYg1v5dpL6jn--P22d-QP2cUC3GWfMDwt6XdF0ZvhoHSkLJ-n0gyhZrR0JHoU5qr342IYz&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 4 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS2ZSTpdmde4OwL5bGLbOoEUjliEL4-Bu36N8EGuRLBh7VVbJ4YwoownMf5dHzn3PQ1qg157GrbO7OGPU_YANAw4mLLpqVdphRZoERewAVFvsaVaUF0vNda&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 5 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQWDSVgx-GOsjLooLXOQoDZU3qkXAU6evXKW8g64KyIQSlULokIlzjyZP3sWEt17AGsMZXUMlDEftIHAl8NI4N8i3h7jfYLJ5SOFLoCxr3O5iMxZrvUvEvkrQ&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 6 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ_OmBpsN-TZYUJHBfxGZL-fZQCfC1CYrWyhSnXuXxkkliXuSYoIPoR9stncHEOBWzlhJbLAE-2l50f2qhbZfL1d_QLoYRgQSEMq31veSXEcXAUhHEIwe-U&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 7 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ_KK53AiVG2bFELRrPWV9R-lE_eE-13FzADytcTpk97dmfFEDaBHo3XjnOQkWY_yVZ2nrQA8oohO5GO98zkAY5NdxO-Lnw0zkjCiYohzm1&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 8 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQrVltOSqRmgo5OAfbkiV8GQbsRoYgksIf5Lj-543ZXiszC8C7u_nkZMOOZXvFb-kTBPzmCYH9Wl-ib47ntI1YzHQhoVw6SyyzuDm9T-40F3OjQ88YNkj2GeQ&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 9 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTD3fzz11Wub_Do9qQijgye32rO-xecQT5Kx-hHmDak6AEht1vu400P4CTuBOARkUiI0yrxcnBIzvZcczoQMG3NmoFXqA4zC8ew-d_OZmwJL2oG8l1Qcy2tow&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 10 -->
+	<div class="clothing-card">
+		<img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTdun4COwj5jwZ5YQQha_BvuZ4fGTslOo8w6uljvP7LzgAS_aE7oVj3AdurQzwONVACHu2_Zk6mbpLcZFV_vMuSuuU73VgoVGAMkCUsfLQ&usqp=CAE"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Repeat the same structure for the other cards -->
+</section>
+
+<!-- Advertisement One Container-->
+<section class="advertisement-container">
+	<div class="advertisement-image">
+		<a href="accurist.html">
+			<img src="https://www.fhinds.co.uk/Images/Components/TwoColumn/AccuristBrandPageImage2_20220710-094110.jpg"
+				alt="Advertisement 1" style="padding-top: 1px; padding-right: -5px; height: 75.5%;">
+		</a>
+	</div>
+	<div class="advertisement-image">
+		<img src="https://www.watchpro.com/2016/11/ACCURIST_2016-Advertising.jpg" alt="Advertisement 2">
+	</div>
+	<div class="advertisement-image">
+		<img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/ed65cff1-a87b-4aab-b00f-bab396cbcecf.__CR0,0,1940,1200_PT0_SX970_V1___.jpg"
+			alt="Advertisement 3" style="padding-top: 1px; padding-left: -5px; height: 75.5%;">
+	</div>
+</section>
+
+<!-- New Arrival Heading -->
+<div class="arrival-container">
+	<h2 data-text="New Arrivals">New Arrivals</h2><br>
+	<p
+		style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+		Explore our latest arrivals and discover the newest additions to our collection !</p>
+</div>
+
+<section class="clothing-cards">
+	<!-- Card 1 -->
+	<div class="clothing-card">
+		<img src="https://img101.urbanic.com/v1/goods-pic/56f734f4f9d14fe8b6173b52524a0ee5UR_w1440_q90.webp"
+			alt="Clothing 1" style="height: 69%;">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fa-regular fa-star-half-stroke"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 2 -->
+	<div class="clothing-card">
+		<img src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1706356849_3043826.jpg?w=480&dpr=1.3"
+			alt="Clothing 1" style="height: 69%;">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 3 -->
+	<div class="clothing-card">
+		<img src="https://img.perniaspopupshop.com/catalog/product/c/h/CHOBT082201_1.jpg?impolicy=detailimageprod"
+			alt="Clothing 1" style="height: 69%;">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 4 -->
+	<div class="clothing-card">
+		<img src="https://img101.urbanic.com/v1/goods-pic/13324969b73640f8b07b00f84bbf7da6UR_w1440_q90.webp"
+			alt="Clothing 1" style="height: 69%;">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 5 -->
+	<div class="clothing-card">
+		<img src="https://cdn.shopify.com/s/files/1/0545/7595/6147/files/2346173945-6427-MDL-CRP_724x.jpg?v=1704337461"
+			alt="Clothing 1" style="height: 69%;">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 6 -->
+	<div class="clothing-card">
+		<img src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1688208075_9054126.jpg?format=webp&w=480&dpr=1.3"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 7 -->
+	<div class="clothing-card">
+		<img src="https://lsco.scene7.com/is/image/lsco/374901816-front-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,1&op_usm=0.6,0.6,8&wid=1120&hei=1494"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 8 -->
+	<div class="clothing-card">
+		<img src="https://assets.myntassets.com/h_480,q_100,w_360/v1/assets/images/16262864/2022/1/18/22b90316-c983-44f0-87c3-f43c1a1ae2ab1642490925022-URBANIC-Women-Jeans-3911642490924207-1.jpg"
+			alt="Clothing 1">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 9 -->
+	<div class="clothing-card">
+		<img src="https://img.faballey.com/images/Product/RCD00428Z/d3.jpg" alt="Clothing 1" style="height: 69%;">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Card 10 -->
+	<div class="clothing-card">
+		<img src="https://img101.urbanic.com/v1/goods-pic/14f6bfafe7c74ccdbbebd1a9131f8d14_w1440_q90.webp"
+			alt="Clothing 1" style="height: 69%;">
+		<h4>Company Name</h4>
+		<h3>Product Name</h3>
+		<div class="rating">
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+			<i class="fas fa-star"></i>
+		</div>
+		<p>$99.99</p>
+		<button>Add to Cart</button>
+	</div>
+	<!-- Repeat the same structure for the other cards -->
+</section>
+
+<div class="promotion-category">
+	<!-- Other Products Collections Part 1-->
+	<section id="other-products">
+		<!-- Image Container -->
+		<div class="product-container">
+			<!-- Image 1 -->
+			<a href="product_page_1.html">
+				<img src="{% static  'img/assets/cosmetics.png' %}" alt="Image 1">
+			</a>
+
+			<!-- Image 2 -->
+			<a href="product_page_2.html">
+				<img src="{% static  'img/assets/jwellery.png' %}" alt="Image 2">
+			</a>
+		</div>
+	</section>
+
+	<!-- Other Category Collections-->
+	<div id="featured-collections">
+		<div class="featured-image-container">
+			<a href="page1.html"><img src="{% static  'img/assets/footwear.png' %}" alt="Image 1"></a>
+			<a href="page2.html"><img src="{% static  'img/assets/homedecor.png' %}" alt="Image 2"></a>
+			<a href="page3.html"><img src="{% static  'img/assets/book.png' %}" alt="Image 3"></a>
+		</div>
+	</div>
+</div>
+
+<!-- Newspaper Subscription Section -->
+<section id="newspaper-subscription">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Stay Ahead of the Curve : Join MERCURY's Newsletter Today !</h2><br>
+				<p>Unlock Exclusive Deals and Be the First to Know About New Arrivals ! Subscribe Now and Elevate Your
+					Shopping Experience with MERCURY</p>
+				<form action="#" method="post" class="subscribe-form"
+					style="display: flex; flex-direction: column; align-items: center;" onsubmit="subscribe(event)">
+					<div class="input-group">
+						<input id="email-input" type="email" class="form-control"
+							placeholder="Enter your email address here..." required>
+						<span class="input-group-btn">
+							<button class="button-62" role="button">Subscribe</button>
+						</span>
+					</div>
+					<div id="notification" style="margin-top: 10px;"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="{% static 'js/scripts.js' %}"></script>
 {% endblock content %}

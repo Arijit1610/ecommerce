@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.navbar {
+    background-image: url('https://rare-gallery.com/uploads/posts/131029-dark-purple-violet-hd-4k.jpg');
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-top: -40px;
+
+}
+
+.add-first {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.add-second {
+    margin-left: 3px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 620px;
+}
+
+.search-select {
+    flex: 0 0 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px 0 0 4px;
+    padding: 10.6px;
+    background-color: #cccccc;
+}
+
+.search-input {
+    flex: 1;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+}
+
+.search-icon {
+    flex: 0 0 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: turquoise;
+    border-radius: 0 4px 4px 0;
+    padding: 10.2px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: black;
+}
+
+.nav-signin:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+}
+
+.nav-second {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav-cart i {
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-search {
+        max-width: 400px;
+    }
+    
+    .search-input {
+        width: calc(100% - 58px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-search {
+        max-width: 100%;
+    }
+    
+    .search-select {
+        flex: 0 0 40px;
+    }
+    
+    .search-input {
+        width: calc(100% - 50px);
+    }
+
+    .search-icon {
+        flex: 0 0 40px;
+    }
+}
+
+.image-section {
+    display: flex;
+    margin: 0px auto;
+    max-width: 1700px; /* Adjust as needed */
+}
+
+.image-container {
+    flex: 1;
+    margin: 0; /* Remove any default margin */
+}
+
+.image-container img {
+    width: 100%; /* Make the image fill the entire width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline styling */
+}
+
+.heading-container {
+    text-align: center; /* Align the heading to the center */
+    margin: 20px auto; /* Add some margin for spacing */
+}
+
+.heading-container h2 {
+    /* Add your desired styles for the heading */
+    font-size: 50px;
+    font-family: 'Lucida Calligraphy';
+    text-align: center;
+    margin-top: 35px;
+    color: transparent;
+    background-image: url('https://giffiles.alphacoders.com/142/14253.gif');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+}
+.card-container {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    margin: 25px auto;
+    max-width: 1800px; /* Adjust as needed */
+}
+
+.card {
+    width: 200px; /* Adjust as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    margin-top: 5px;
+    color: maroon;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
+    max-width: 1800px; /* Adjust as needed */
+    background-image: url('https://wallpapercave.com/wp/casiEOg.jpg');
+    background-size: cover;
+}
+
+.feature-card {
+    width: 200px; /* Adjust as needed */
+    text-align: center;
+    border: 2px solid #000; /* Border for the card */
+    border-radius: 10px; /* Rounded corners for the card */
+    padding: 10px; /* Padding to separate content from the border */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    background-color: #f9f9f9;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.feature-card img {
+    width: 100%;
+    height: auto;
+    padding-top: -20px;
+}
+
+.feature-card h3 {
+    color: maroon;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;   
+}
+
+.summer-container h2 {
+    /* Add your desired styles for the heading */
+    font-size: 40px;
+    font-family: 'CASTELLAR';
+    text-align: center;
+    margin-top: 60px;
+    color: transparent;
+    background-image: url('https://i.makeagif.com/media/12-10-2023/ptmEhJ.gif');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+}
+
+.clothing-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1700px;
+    margin: 40px auto 20px; /* Adjusted margin-bottom */
+}
+
+.clothing-card {
+    width: calc(20% - 20px); /* Adjust as needed */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.clothing-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.clothing-card h4,
+.clothing-card h3 {
+    margin: 10px 0;
+}
+
+.rating {
+    color: #ffd700; /* Star color */
+    margin-bottom: 10px;
+}
+
+.rating i {
+    font-size: 20px;
+}
+
+.clothing-card p {
+    font-weight: bold;
+}
+
+.clothing-card button {
+    background-color: #007bff; /* Button background color */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clothing-card button:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+
+.advertisement-container {
+    display: flex;
+    max-width: 1700px;
+    padding-top: 30px;
+}
+
+.advertisement-image {
+    flex: 1;
+    margin-top: 20px; /* Adjust as needed */
+    justify-content: space-evenly;
+}
+
+.advertisement-image img {
+    width: 100%;
+    height: auto;
+}
+
+.arrival-container h2 {
+    /* Add your desired styles for the heading */
+    font-size: 40px;
+    font-family: 'CASTELLAR';
+    text-align: center;
+    margin-top: -35px;
+    color: transparent;
+    background-image: url('https://i.makeagif.com/media/12-10-2023/ptmEhJ.gif');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+}
+
+.other-products {
+    display: flex;
+    margin: 0px auto;
+    max-width: 1700px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-left: 70px;
+    max-width: 1500px;
+    flex: 1;
+    margin: 0; /* Remove any default margin */
+  }
+  
+  .product-container img {
+    width: calc(95% - 20px); /* Make each image fill 50% of the container width with a 10px gap */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline styling */
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-right: 10px; /* Add a margin to the right of each image */
+  }
+  
+  .product-container img:last-child {
+    margin-right: 0; /* Remove margin from the last image to prevent extra space */
+  }
+
+  .featured-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    max-width: 1500px;
+    padding-bottom: 40px;
+}
+
+.featured-image-container a {
+    flex: 1;
+    text-align: center;
+}
+
+.featured-image-container a:not(:last-child) {
+    margin-right: 20px; /* Adjust the gap between images */
+    margin-left: 20px;
+}
+
+.featured-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove any default inline styling */
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-right: 10px; /* Add a margin to the right of each image */
+}
+.promotion-category {
+    background-image: url('https://wallpapertag.com/wallpaper/full/7/0/4/63855-white-background-hd-1920x1080-download-free.jpg');
+    mix-blend-mode: lighten;
+}
+
+/* Newspaper Subscription Section Styles */
+
+#newspaper-subscription {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    background-image: url('https://wallpapercrafter.com/desktop3/1046632-Line-Stripes-Colored-copy-space-multi-colored.jpg');
+    background-size: cover;
+  }
+  
+  #newspaper-subscription h2 {
+    font-size: 30px;
+    font-family: 'Sitka Small';
+    text-align: center;
+    margin-top: 35px;
+    color: transparent;
+    background-image: url('https://i.makeagif.com/media/2-11-2023/EIIE2F.gif');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+  }
+  
+  #newspaper-subscription p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #newspaper-subscription .subscribe-form .input-group {
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  #newspaper-subscription .subscribe-form input[type="email"] {
+    height: 40px;
+    width: 290px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  #newspaper-subscription .subscribe-form .input-group-btn .btn {
+    height: 50px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: center;
+  }
+  
+  #newspaper-subscription .subscribe-form .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  #newspaper-subscription .subscribe-form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+  
+  /* Subscribe Button CSS */
+  .button-62 {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+  
+  .button-62:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+  
+  .button-62:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+    background-image: url('https://cdn.statusqueen.com/desktopwallpaper/thumbnail/Hd_4k_desktop_wallpaper_photos11-527.jpg');
+    background-size: cover;
+    margin-top: -70px;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+    margin-top: -15px;
+    mix-blend-mode: lighten;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
