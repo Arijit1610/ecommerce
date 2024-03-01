@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Registration Form</title>
+</head>
+
+<body>
+	<!-- <h1>Register</h1> -->
+	<!-- {% if errors %}
+	<ul class="errors">
+		{% for field, error in errors.items %}
+		<li>{{ field }}: {{ error }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %} -->
+	<!-- <form method="post">
+		{% csrf_token %} -->
+	<!-- {{ form.as_p }} -->
+	<!-- <label for="username">Username</label>
+		{{form.username}} <br>
+		<label for="email">email</label>
+		{{form.email}} <br>
+		<label for="first_name">First Name</label>
+		{{form.first_name}} <br>
+		<label for="last_name">last_name</label>
+		{{form.last_name}} <br>
+		<label for="password">Password</label>
+		{{form.password1}} <br>
+		<label for="confirm-password">confirm-password</label>
+		{{form.password2}} <br>
+		<button type="submit">Register</button>
+	</form> -->
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Register</button>
+	</form>
+
+</body>
+
+</html>
