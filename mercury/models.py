@@ -9,7 +9,7 @@ class Product(models.Model):
 		return self.product_type
 
 class Fashion(models.Model):
-	fashiontypes = {'M':'mens', 'F':'female', 'C':'child'}
+	fashiontypes = {'M':'Mens', 'F':'Womens', 'C':'Children'}
 	product_type = models.ForeignKey(Product, on_delete=models.CASCADE)
 	brand_name = models.CharField(max_length=100)
 	fashion_name = models.CharField(max_length=100)
@@ -44,8 +44,9 @@ class Eletronices(models.Model):
 		'Laptops' : 'Laptops',
 		'Phone' : 'Phone',
 		'Headphone' : 'Headphone',
-		'PC' : 'PC',
-		'speaker': 'speaker',
+		'Desktop' : 'Desktop',
+		'Speaker': 'Speaker',
+		'Watch' : 'Watch',
 	})
 	price = models.DecimalField(decimal_places=2, max_digits=10)
 	qty = models.IntegerField()
@@ -70,7 +71,7 @@ class BeautyCosmetics(models.Model):
 		'Foundation' : 'Foundation',
 		'Concealer' : 'Concealer',
 		'Skincare' : 'Skincare',
-		'nails': 'nails',
+		'Nails': 'Nails',
 		'Eyeshadow': 'Eyeshadow',
 		'Bodycare': 'Bodycare',
 		'Facemask' : 'Facemask',
@@ -96,11 +97,10 @@ class BooksAndStationery(models.Model):
 	edition = models.CharField(max_length=100, blank=True)
 	title = models.CharField(max_length=100,blank=False,)
 	types = models.CharField(max_length=20, choices={
-		'books' : 'books',
-		'notebook' : 'notebook',
-		'pen' : 'pen',
-		'bag' : 'bag',
-		'schoolset' : 'schoolset',		
+		'Books' : 'Books',
+		'Bag' : 'Bag',
+		'School Essentials' : 'School Essentials',		
+		'Office Essentials' : 'Office Essentials',		
 	})
 	price = models.DecimalField(decimal_places=2, max_digits=10)
 	qty = models.IntegerField()
@@ -144,9 +144,9 @@ class HomeandKitchen(models.Model):
 	company_name = models.CharField(max_length=100)
 	product_name = models.CharField(max_length=100)
 	Productcatagory = models.CharField(max_length=20, choices={
-		'furniture' : 'furniture',
+		'Furniture' : 'Furniture',
 		'Kitchen' : 'Kitchen',
-		'Cookware' : 'Cookware',
+		'Home Decor' : 'Home Decor',
 	})
 	price = models.DecimalField(decimal_places=2, max_digits=10)
 	qty = models.IntegerField()
