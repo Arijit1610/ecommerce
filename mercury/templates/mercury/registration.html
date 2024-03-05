@@ -1,42 +1,62 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-	<title>Registration Form</title>
-</head>
+{% block title %}
 
-<body>
-	<!-- <h1>Register</h1> -->
-	<!-- {% if errors %}
-	<ul class="errors">
-		{% for field, error in errors.items %}
-		<li>{{ field }}: {{ error }}</li>
-		{% endfor %}
+<title>Login Page</title>
+{% endblock title %}
+
+{% block content %}
+<center>
+	{% if page == 'login' %}
+	{% if messages %}
+	<ul class="messages">
+		{% for message in messages %}
+		<li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+			{% endfor %}
 	</ul>
-	{% endif %} -->
-	<!-- <form method="post">
-		{% csrf_token %} -->
-	<!-- {{ form.as_p }} -->
-	<!-- <label for="username">Username</label>
-		{{form.username}} <br>
-		<label for="email">email</label>
-		{{form.email}} <br>
-		<label for="first_name">First Name</label>
-		{{form.first_name}} <br>
-		<label for="last_name">last_name</label>
-		{{form.last_name}} <br>
+	{% endif %}
+	<h1>Login Page</h1> <br>
+	<form action="" method="post">
+		{% csrf_token %}
+		<label for="Username">Username or Email</label>
+		<input type="text" name="username" > <br> <br> 
 		<label for="password">Password</label>
-		{{form.password1}} <br>
-		<label for="confirm-password">confirm-password</label>
-		{{form.password2}} <br>
-		<button type="submit">Register</button>
-	</form> -->
+		<input type="password" name="password" id=""> <br> <br>
+		<button type="submit">Submit</button><br>
+	</form>
+	<br>
+	<p>Dont have account yet?</p>
+	<br>
+	<a href="{% url 'register' %}"><button>Signup</button></a>
+	{% else %}
+
+	<h1>Register</h1>
+	{% if errors %}
+	{% for field, error in errors.items %}
+	{{ field }}: {{ error }}
+	{% endfor %}
+	{% endif %}
 	<form method="post">
 		{% csrf_token %}
-		{{ form.as_p }}
+		<!-- {{ form.as_p }} -->
+		<label for="username">Username</label>
+		{{form.username}} <br> <br>
+		<label for="email">email</label>
+		{{form.email}} <br> <br>
+		<label for="first_name">First Name</label>
+		{{form.first_name}} <br> <br>
+		<label for="last_name">Last name</label>
+		{{form.last_name}} <br> <br>
+		<label for="password">Password</label>
+		{{form.password1}} <br> <br>
+		<label for="confirm-password">Confirm Password</label>
+		{{form.password2}} <br> <br>
 		<button type="submit">Register</button>
 	</form>
+	<p>Already have account?</p>
+	<a href="{% url 'login' %}"><button>login</button></a>
+	{% endif %}
 
-</body>
-
-</html>
+</center>
+{% endblock %}

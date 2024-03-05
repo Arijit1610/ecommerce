@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>{{types}} store</title>
+{% endblock title %}
+{% block content %}
+
+
+{% if products %}
+<h2>Results for {{types}} </h2>
+<ol>
+
+	{% for product in products %}
+	<li>{{product.product_name}} </li>
+	<li>
+		{{product.company_name}}
+	</li>
+	<li>{{product.price}}</li>
+	{% endfor %}
+</ol>
+
+{% else %}
+<center>
+	<br>
+	<br>
+	<h3>No Product Available for {{types}}</h3>
+</center>
+{% endif %}
+
+{% endblock %}

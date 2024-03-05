@@ -3,9 +3,11 @@
 <footer class="footer-distributed">
 
 	<div class="footer-left">
-<img src="{% static  'img/assets/MercuryLogo.png' %}"><br>
+		<a href="{% url 'home' %}">
+			<img src="{% static  'img/assets/MercuryLogo.png' %}"><br>
+		</a>
 		<p class="footer-links">
-			<a href="#">Home</a>
+			<a href="{% url 'home' %}">Home</a>
 			|
 			<a href="#">About</a>
 			|

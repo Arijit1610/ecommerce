@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+<title>Search Products</title>
+{% endblock %}
+
+{% block content %}
+
+{% if query %}
+
+<br>
+<br>
+{% if fashion_results %}
+<h2>Results</h2>
+<ul>
+    {% for fashion in fashion_results %}
+    <li>{{ fashion.fashion_name }}</li>
+    {% endfor %}
+</ul>
+{% elif electronics_results %}
+<h2>Results</h2>
+<ul>
+    {% for electronics in electronics_results %}
+    <li>{{ electronics.product_name }}</li>
+    {% endfor %}
+</ul>
+{% elif beauty_results %}
+<h2>Results</h2>
+<ul>
+    {% for beauty in beauty_results %}
+    <li>{{ beauty.product_name }}</li>
+    {% endfor %}
+</ul>
+{% elif books_results %}
+<h2>Results</h2>
+<ul>
+    {% for book in books_results %}
+    <li>{{ book.title }}</li>
+    {% endfor %}
+</ul>
+{% elif sports_results %}
+<h2>Results</h2>
+<ul>
+    {% for sports in sports_results %}
+    <li>{{ sports.product_name }}</li>
+    {% endfor %}
+</ul>
+{% elif home_results %}
+<h2>Results</h2>
+<ul>
+    {% for home in home_results %}
+    <li>{{ home.product_name }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<center>
+	<br>
+	<br>
+	<h3>No Results found for {{query}}</h3>
+	<h5>Try checking your spelling or use more general terms</h2>
+</center>
+{% endif %}
+
+{% endif %}
+
+{% endblock %}
