@@ -14,5 +14,7 @@ urlpatterns = [
 	path('sports',views.sportsandoutdoor,name='sports'),
 	path('homeandkitchen',views.homeandkitchen,name='homeandkitchen'),
 	path('activate/<uidb64>/<token>', views.activate, name='activate'),
+	# path('', views.default_view, name='default'),
 ]
 
+# handler404 = 'mercury.views.handler404'
