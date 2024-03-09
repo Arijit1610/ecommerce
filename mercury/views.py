@@ -162,23 +162,27 @@ def searchProducts(request):
     beauty_results = BeautyCosmetics.objects.filter(product_name__icontains=query) | \
         BeautyCosmetics.objects.filter(company_name__icontains=query) | \
         BeautyCosmetics.objects.filter(types__icontains=query) |\
-        BeautyCosmetics.objects.filter(product_type__product_type__icontains=query)
+        BeautyCosmetics.objects.filter(
+            product_type__product_type__icontains=query)
 
     books_results = BooksAndStationery.objects.filter(title__icontains=query) | \
         BooksAndStationery.objects.filter(author_name__icontains=query) | \
         BooksAndStationery.objects.filter(publisher_name__icontains=query) | \
         BooksAndStationery.objects.filter(types__icontains=query) |\
-        BooksAndStationery.objects.filter(product_type__product_type__icontains=query)
+        BooksAndStationery.objects.filter(
+            product_type__product_type__icontains=query)
 
     sports_results = Sportsandoutdoor.objects.filter(product_name__icontains=query) | \
         Sportsandoutdoor.objects.filter(company_name__icontains=query) | \
         Sportsandoutdoor.objects.filter(sportscatagory__icontains=query) |\
-        Sportsandoutdoor.objects.filter(product_type__product_type__icontains=query)
+        Sportsandoutdoor.objects.filter(
+            product_type__product_type__icontains=query)
 
     home_results = HomeandKitchen.objects.filter(product_name__icontains=query) | \
         HomeandKitchen.objects.filter(company_name__icontains=query) | \
         HomeandKitchen.objects.filter(Productcatagory__icontains=query) |\
-        HomeandKitchen.objects.filter(product_type__product_type__icontains=query)
+        HomeandKitchen.objects.filter(
+            product_type__product_type__icontains=query)
 
     context = {
         'fashion_results': fashion_results,
@@ -192,42 +196,48 @@ def searchProducts(request):
 
     return render(request, 'mercury/search_results.html', context)
 
+
 def eletronices(request):
-	types = "Eletronices"
-	products = Eletronices.objects.all()
-	context = {'products' : products, 'types': types}
-	return render(request, 'mercury/product_view.html',context)
+    types = "Eletronices"
+    products = Eletronices.objects.all()
+    context = {'products': products, 'types': types}
+    return render(request, 'mercury/product_view.html', context)
 
 
 def fashion(request):
-	types = "Fashion"
-	products = Fashion.objects.all()
-	context = {'products' : products, 'types': types}
-	return render(request, 'mercury/product_view.html',context)
+    types = "Fashion"
+    products = Fashion.objects.all()
+    context = {'products': products, 'types': types}
+    return render(request, 'mercury/product_view.html', context)
+
 
 def homeandkitchen(request):
-	types = "Home and Kitchen"
-	products = HomeandKitchen.objects.all()
-	context = {'products' : products, 'types': types}
-	return render(request, 'mercury/product_view.html',context)
+    types = "Home and Kitchen"
+    products = HomeandKitchen.objects.all()
+    context = {'products': products, 'types': types}
+    return render(request, 'mercury/product_view.html', context)
+
 
 def sportsandoutdoor(request):
-	types = "Sports and Outdoors"
-	products = Sportsandoutdoor.objects.all()
-	context = {'products' : products, 'types': types}
-	return render(request, 'mercury/product_view.html',context)
+    types = "Sports and Outdoors"
+    products = Sportsandoutdoor.objects.all()
+    context = {'products': products, 'types': types}
+    return render(request, 'mercury/product_view.html', context)
+
 
 def beautycosmetics(request):
-	types = "Beauty and Cosmetics"
-	products = BeautyCosmetics.objects.all()
-	context = {'products' : products, 'types': types}
-	return render(request, 'mercury/product_view.html',context)
+    types = "Beauty and Cosmetics"
+    products = BeautyCosmetics.objects.all()
+    context = {'products': products, 'types': types}
+    return render(request, 'mercury/product_view.html', context)
+
 
 def booksandstationery(request):
-	types = "Book and Stationery"
-	products = BooksAndStationery.objects.all()
-	context = {'products' : products, 'types': types}
-	return render(request, 'mercury/product_view.html',context)
+    types = "Book and Stationery"
+    products = BooksAndStationery.objects.all()
+    context = {'products': products, 'types': types}
+    return render(request, 'mercury/product_view.html', context)
+
 
 def handler404(request, exception, template_name="404.html"):
     response = render_to_response(template_name)
