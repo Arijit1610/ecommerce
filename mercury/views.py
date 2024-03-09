@@ -106,8 +106,7 @@ def loginPage(request):
                 user = authenticate(
                     request, username=user.username, password=password)
                 login(request, user)
-                messages.success(request, f"Hello <b>{
-                                 user.username}</b>! You have been logged in")
+                messages.success(request, f"Hello <b>{user.username}</b>! You have been logged in")
                 print("login Sucessess")
                 return redirect('home')
             except:
@@ -116,8 +115,7 @@ def loginPage(request):
                     request, username=username, password=password)
                 print("block3")
                 login(request, user)
-                messages.success(request, f"Hello <b>{
-                                 user.username}</b>! You have been logged in")
+                messages.success(request, f"Hello <b>{user.username}</b>! You have been logged in")
                 print("login Sucessess")
                 return redirect('home')
         except:
