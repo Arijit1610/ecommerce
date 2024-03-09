@@ -27,8 +27,7 @@ def activateEmail(request, user, to_email):
         messages.success(request, f'Dear <b>{user}</b>, please go to you email <b>{to_email}</b> inbox and click on \
                 received activation link to confirm and complete the registration. <b>Note:</b> Check your spam folder.')
     else:
-        messages.error(request, f'Problem sending confirmation email to {
-                       to_email}, check if you typed it correctly.')
+        messages.error(request, f'Problem sending confirmation email to {to_email}, check if you typed it correctly.')
 # Create your views here.
 
 
@@ -107,8 +106,7 @@ def loginPage(request):
                 user = authenticate(
                     request, username=user.username, password=password)
                 login(request, user)
-                messages.success(request, f"Hello <b>{
-                                 user.username}</b>! You have been logged in")
+                messages.success(request, f"Hello <b>{user.username}</b>! You have been logged in")
                 print("login Sucessess")
                 return redirect('home')
             except:
@@ -117,8 +115,7 @@ def loginPage(request):
                     request, username=username, password=password)
                 print("block3")
                 login(request, user)
-                messages.success(request, f"Hello <b>{
-                                 user.username}</b>! You have been logged in")
+                messages.success(request, f"Hello <b>{user.username}</b>! You have been logged in")
                 print("login Sucessess")
                 return redirect('home')
         except:
